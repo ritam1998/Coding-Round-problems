@@ -1,8 +1,7 @@
 package leetcodeproblems;
 
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 /**
@@ -29,6 +28,7 @@ public class UniquePairs {
             pair_right[i] = s.next();
         }
         findPairs(pair_left,pair_right,t);
+        capitalizeWords("hello world");
     }
     public static void findPairs(String[] p1,String[] p2,int len){
         Set<String> strings = new HashSet<>();
@@ -38,5 +38,22 @@ public class UniquePairs {
             strings.add(s);
             System.out.println(strings.size());
         }
+    }
+    /**
+     * The elements of a String are called characters. The number of characters in a String is called the length, and it can be retrieved with the String.length() method.
+     *
+     * Given two strings of lowercase English letters,  and , perform the following operations:
+     *
+     * Sum the lengths of A and B.
+     * Determine if A is lexicographically larger than B (i.e.: does B come before  in the dictionary?).
+     * Capitalize the first letter in A  and B  and print them on a single line, separated by a space.
+     *
+     * @Link https://www.hackerrank.com/challenges/java-strings-introduction/problem?isFullScreen=true
+     * */
+
+    public static void capitalizeWords(String input){
+        String[] str = input.split(" ");
+        String st = Arrays.stream(str).map(s -> Character.toUpperCase(s.charAt(0)) + s.substring(1,s.length())).collect(Collectors.joining(" "));
+        System.out.println(st);
     }
 }
