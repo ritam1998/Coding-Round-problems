@@ -11,6 +11,7 @@ public class RemovedAllVowels {
     public static void main(String[] args) {
         System.out.println(removedAllVowels("programming is fun"));
         returnLastElement();
+        System.out.println(removedUnderScore("string_function_test"));
     }
     /**
      *  Given a string, remove all vowels (both uppercase and lowercase) and capitalise the first letter of each word in the resulting string.
@@ -59,5 +60,18 @@ public class RemovedAllVowels {
         integerList.add(5);
 
         System.out.println(integerList.get(integerList.size()-2));
+    }
+
+    /**
+     * Write a program to remove underscore from a given string and make update the first character to uppercase
+     * Example:
+     * Input: "string_function_test"
+     * output: "String Function Test"
+     * */
+
+    private static String removedUnderScore(String data){
+        return Arrays.stream(data.split("_"))
+                .map(value -> String.valueOf(Character.toUpperCase(value.charAt(0))) + value.subSequence(1,value.length()))
+                .collect(Collectors.joining(" "));
     }
 }
