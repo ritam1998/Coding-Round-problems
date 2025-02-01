@@ -1,7 +1,6 @@
-package leetcodeproblems;
+package leetcodeproblems.stringproblems;
 
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class ReverseVowelsOfAString {
@@ -14,6 +13,7 @@ public class ReverseVowelsOfAString {
      * @Important
      * @Leetcode
      * @TwoPointersMethod
+     * @345. Reverse Vowels of a String
      * @https://leetcode.com/problems/reverse-vowels-of-a-string/description/
      * Given a string s, reverse only all the vowels in the string and return it.
      *
