@@ -1,4 +1,4 @@
-package leetcodeproblems;
+package leetcodeproblems.stringproblems;
 
 public class RotateString {
     public static void main(String[] args) {
@@ -7,6 +7,7 @@ public class RotateString {
     /**
      * @Important
      * @LeetCode
+     * @796. Rotate String,
      * @https://leetcode.com/problems/rotate-string/description/
      * Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.
      *
