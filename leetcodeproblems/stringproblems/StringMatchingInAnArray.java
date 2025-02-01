@@ -1,4 +1,4 @@
-package leetcodeproblems;
+package leetcodeproblems.stringproblems;
 
 import java.util.ArrayList;
 import java.util.HashSet;
