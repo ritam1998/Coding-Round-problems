@@ -1,4 +1,4 @@
-package leetcodeproblems;
+package leetcodeproblems.stringproblems;
 
 import java.math.BigInteger;
 import java.text.NumberFormat;
