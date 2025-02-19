@@ -1,11 +1,12 @@
 package leetcodeproblems.arrayproblems;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MoveZeroes {
     public static void main(String[] args) {
-        moveZeroes(new int[]{0});
+        moveZeroes(new int[]{0,1,0,3,12});
     }
     /**
      * @leetcode
@@ -26,7 +27,7 @@ public class MoveZeroes {
      * Input: nums = [0]
      * Output: [0]
      * */
-    public static void moveZeroes(int[] nums) {
+    public static int[] moveZeroes(int[] nums) {
 
         List<Integer> list = new ArrayList<>();
         List<Integer> withZeros = new ArrayList<>();
@@ -36,11 +37,12 @@ public class MoveZeroes {
             else withZeros.add(nums[i]);
         }
 
+        list.addAll(withZeros);
+
         if(list.size() > 0){
             for(int i = 0;i<nums.length;i++) nums[i] = list.get(i);
         }
-
-
-        System.out.println(nums);
+        System.out.println(Arrays.toString(nums));
+        return nums;
     }
 }
